@@ -31,7 +31,6 @@ func MsgHandlers() Registry {
 	var handlers Registry
 
 	handlers.Add((&Logger{}).Call)
-	handlers.Add((&Mailgun{ServerConfig.Mailgun}).Call)
 	handlers.Add((&Reload{}).Call)
 
 	return handlers
