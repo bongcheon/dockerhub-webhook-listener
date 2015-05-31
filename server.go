@@ -103,10 +103,6 @@ func reqHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		http.Error(w, "Could not decode json", 500)
 		log.Print(err)
-		sendCallback(imgConfig.Callback_url, &CallbackMessage{
-			State: "error",
-			Description: "Could not decode json",
-		})
 		return
 	}
 
